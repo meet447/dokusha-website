@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dokusha - A powerful open-source manga reader for Android with extension support">
+    <meta name="keywords" content="manga reader, android app, manga, manhwa, manhua, open source">
+    <title>Dokusha - Manga Reader App</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #1a1b1e;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        }
+        .navbar {
+            background-color: transparent;
+            padding: 1.5rem 0;
+            backdrop-filter: blur(10px);
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #8ab4f8 !important;
+        }
+        .hero-section {
+            min-height: 100vh;
+            padding-top: 120px;
+            position: relative;
+        }
+        .hero-title {
+            font-size: 5rem;
+            background: linear-gradient(45deg, #8ab4f8, #64b5f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .hero-subtitle {
+            font-size: 4rem;
+            color: #e8eaed;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+        .hero-text {
+            font-size: 1.2rem;
+            color: #9aa0a6;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        .btn-primary {
+            background-color: #8ab4f8;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-weight: 500;
+            margin-right: 1rem;
+        }
+        .btn-outline {
+            border: 1px solid #8ab4f8;
+            color: #8ab4f8;
+            padding: 0.8rem 2rem;
+            font-weight: 500;
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background-color: rgba(138, 180, 248, 0.1);
+            color: #8ab4f8;
+        }
+        .app-icon {
+            width: 300px;
+            height: 300px;
+            margin-bottom: 2rem;
+            background-color: #1a1b1e;
+            border-radius: 30%;
+            padding: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        .app-icon:hover {
+            transform: translateY(-10px);
+        }
+        .features-section {
+            padding: 4rem 0;
+        }
+        .feature-title {
+            font-size: 2rem;
+            color: #e8eaed;
+            margin-bottom: 3rem;
+        }
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #8ab4f8;
+            margin-bottom: 1rem;
+        }
+        .download-section {
+            background-color: #242528;
+            padding: 4rem 0;
+            margin-top: 2rem;
+        }
+        .screenshot {
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .screenshot:hover {
+            transform: translateY(-10px);
+        }
+        .social-links {
+            margin-top: 2rem;
+        }
+        .social-links a {
+            color: #8ab4f8;
+            font-size: 1.5rem;
+            margin: 0 1rem;
+            transition: color 0.3s ease;
+        }
+        .social-links a:hover {
+            color: #ffffff;
+        }
+        .feature-card {
+            background-color: #242528;
+            border-radius: 12px;
+            padding: 2rem;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        .nav-btn {
+            border: 1px solid rgba(138, 180, 248, 0.2);
+            color: #8ab4f8;
+            padding: 0.8rem 1.5rem;
+            font-weight: 500;
+            background: rgba(138, 180, 248, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .nav-btn:hover {
+            background: rgba(138, 180, 248, 0.2);
+            color: #8ab4f8;
+            border-color: rgba(138, 180, 248, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="assets/icon.png" alt="Dokusha" height="40" class="me-2" style="background: #1a1b1e; border-radius: 8px;">
+                Dokusha
+            </a>
+            <div class="ms-auto">
+                <a href="#features" class="nav-btn me-2 text-decoration-none">Features</a>
+                <a href="#download" class="nav-btn me-2 text-decoration-none">Download</a>
+                <a href="privacy-policy.html" class="nav-btn text-decoration-none">Privacy Policy</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <h1 class="hero-title">Dokusha</h1>
+                    <h2 class="hero-subtitle">Manga in your pocket</h2>
+                    <p class="hero-text">A simple and convenient open source manga reader for Android from and for the community, where you can find and read your favorite manga easier than ever.</p>
+                    <div>
+                        <a href="#download" class="btn btn-primary">Download Now</a>
+                        <a href="https://github.com/meet447/dokusha" class="btn btn-outline">View on GitHub</a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/meet447/dokusha" target="_blank"><i class="bi bi-github"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-discord"></i></a>
+                        <a href="#" target="_blank"><i class="bi bi-telegram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <img src="assets/icon.png" alt="Dokusha Icon" class="app-icon">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="container">
+            <h2 class="feature-title text-center">What Dokusha can do?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="text-center">
+                            <i class="bi bi-puzzle-fill feature-icon"></i>
+                            <h5 class="text-white">Multiple Extensions</h5>
+                            <p class="text-muted">Access diverse content from various sources with our extension support.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="text-center">
+                            <i class="bi bi-layout-split feature-icon"></i>
+                            <h5 class="text-white">Dual View Modes</h5>
+                            <p class="text-muted">Choose between webtoon and manga views for your perfect reading experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="text-center">
+                            <i class="bi bi-cloud-download-fill feature-icon"></i>
+                            <h5 class="text-white">Offline Reading</h5>
+                            <p class="text-muted">Download chapters to read your favorite titles without internet connection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="text-center">
+                            <i class="bi bi-bookmark-heart-fill feature-icon"></i>
+                            <h5 class="text-white">Library Management</h5>
+                            <p class="text-muted">Organize your manga collection with categories and favorites.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="text-center">
+                            <i class="bi bi-palette-fill feature-icon"></i>
+                            <h5 class="text-white">Customizable Reader</h5>
+                            <p class="text-muted">Adjust reading direction, colors, and more to your preference.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="text-center">
+                            <i class="bi bi-lightning-fill feature-icon"></i>
+                            <h5 class="text-white">Fast Updates</h5>
+                            <p class="text-muted">Stay up to date with the latest chapters of your favorite manga.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download-section">
+        <div class="container text-center">
+            <h2 class="feature-title">Get Dokusha Now</h2>
+            <p class="text-muted mb-4">Available for Android devices</p>
+            <div class="row justify-content-center g-4">
+                <div class="col-md-4">
+                    <a href="#" class="btn btn-primary btn-lg w-100">
+                        <i class="bi bi-google-play me-2"></i>
+                        Download APK
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="https://github.com/meet447/dokusha/releases" class="btn btn-outline btn-lg w-100">
+                        <i class="bi bi-github me-2"></i>
+                        GitHub Releases
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center py-4">
+        <p>© 2025 Dokusha. All rights reserved.</p>
+        <div>
+            <a href="privacy-policy.html" class="text-muted text-decoration-none me-3">Privacy Policy</a>
+            <a href="https://github.com/meet447/dokusha" class="text-muted text-decoration-none">GitHub</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
